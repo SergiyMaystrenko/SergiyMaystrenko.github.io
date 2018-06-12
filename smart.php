@@ -15,7 +15,7 @@ $mail ->CharSet = 'utf-8';
  $mail ->Username = 'sss615@meta.ua';
  $mail ->Password = '516sss';
  $mail ->SMTPSecure = 'ssl';
- $mail ->Port = 465;
+ $mail ->Port = 587;
  $mail ->setFrom('sss615@meta.ua', sveta simonova);
  $mail ->addAddress('simonova.svet@gmail.com', Svitlana);
  $mail ->isHTML(true);
