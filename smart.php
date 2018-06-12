@@ -14,7 +14,7 @@ $mail ->CharSet = 'utf-8';
  $mail ->SMTPAuth = true;
  $mail ->Username = 'maystrenko33@gmail.com';
  $mail ->Password = 'maistr241281';
- $mail ->SMTPSecure = '#';
+ $mail ->SMTPSecure = 'none';
  $mail ->Port = 587;
  $mail ->setFrom('maystrenko33@gmail.com', Sergiy);
  $mail ->addAddress('simonova.svet@gmail.com', Svitlana);
