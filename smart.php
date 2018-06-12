@@ -10,12 +10,12 @@ $mail ->CharSet = 'utf-8';
 
 //$mail -> SMTPDebug = 3;             // Enable verbose debug  output 
  $mail ->isSMTP();                    
- $mail ->Host = 'smtp.googlemail.com';
+ $mail ->Host = 'smtp.gmail.com';
  $mail ->SMTPAuth = true;
  $mail ->Username = 'maystrenko33@gmail.com';
  $mail ->Password = 'maistr241281';
- $mail ->SMTPSecure = 'none';
- $mail ->Port = 25;
+ $mail ->SMTPSecure = 'ssl';
+ $mail ->Port = 465;
  $mail ->setFrom('maystrenko33@gmail.com', Sergiy);
  $mail ->addAddress('simonova.svet@gmail.com', Svitlana);
  $mail ->isHTML(true);
