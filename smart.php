@@ -10,13 +10,13 @@ $mail ->CharSet = 'utf-8';
 
 //$mail -> SMTPDebug = 3;             // Enable verbose debug  output 
  $mail ->isSMTP();                    
- $mail ->Host = 'smtp.meta.ua';
+ $mail ->Host = 'smtp.gmail.com';
  $mail ->SMTPAuth = true;
- $mail ->Username = 'sss615@meta.ua';
- $mail ->Password = '516sss';
+ $mail ->Username = 'maystrenko33@gmail.com';
+ $mail ->Password = 'maistr241281';
  $mail ->SMTPSecure = 'ssl';
  $mail ->Port = 465;
- $mail ->setFrom('sss615@meta.ua', sveta);
+ $mail ->setFrom('maystrenko33@gmail.com', Sergiy);
  $mail ->addAddress('simonova.svet@gmail.com', Svitlana);
  $mail ->isHTML(true);
  $mail ->Sudjec = 'Тема письма';
