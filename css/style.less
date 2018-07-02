@@ -37,7 +37,7 @@ section {
 	padding-bottom: 3%;
 } 
 .section-header{
-  margin-bottom: 7%;
+  margin-bottom: 4%;
 	h2{
 	font-size: 50px;
 	.opn-bold;
@@ -54,7 +54,7 @@ header{
 	background: @bg-grey url(../img/main-bg.jpg) no-repeat center center;
 	background-size: cover;
 	min-height: 700px;
-	height: 100vh;
+	height: 100%;
 }
 .main {
   &-head {
@@ -192,8 +192,32 @@ border-radius: 5px;
   transform: translateY(4px);
   }
 }
+
+/* .main-nav-bar:hover {
+  .line {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    height: 0;
+    &:before {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    &:after {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+  }  
+}
+} */
+
+
 /*Process section*/
-section#process,section#works,section#services,section#FAQ,section#feedback {
+section#process,section#works,section#services,section#FAQ,section#feedback,section#parallax {
  background-image: url(../img/pattern.png);
  background-repeat: repeat;
 }
@@ -234,7 +258,7 @@ section#process,section#works,section#services,section#FAQ,section#feedback {
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
     border-radius: 50px;
-    background-color: @white;
+    background-color: #fbfad4;
     font-size: 16px;
     &:hover {
       box-shadow: 0px 6px 14px 0px rgba(20, 20, 21, 0.09);
@@ -372,7 +396,7 @@ opacity: 1;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
     border-radius: 50px;
-    background-color: @white;
+    background-color: #fbfad4;
     font-size: 16px;
     &:hover {
       box-shadow: 0px 11px 20px 0px rgba(20,20,21,0.20);
@@ -386,10 +410,7 @@ color: @base-red;
   }
 }
 /* feedback section */   
-section {
-  background-image: url(../img/pattern.png);
-  background-repeat: repeat;
-} 
+
 .carousel-inner {
     height: 800px;
   }
@@ -584,6 +605,13 @@ footer#footer {
 svg {
   max-width: 100%;
 }
+  .modal-content {
+    background-color: #fbfad4;
+  width: 70%;
+  height: 100%;
+  top: 40px;
+  left: 20%;
+  }
 
 /* -------------------------------- 
 
@@ -762,7 +790,13 @@ Modal Window
   }
 
  /* Адаптив */
-@media (min-width: 0px) and (max-width: 480px) {   
+@media (min-width: 0px) and (max-width: 480px) { 
+
+  
+.layer img {
+  width: 50px;
+  padding-top: 20%;
+}  
   .sign button {
     padding: 4px;
   } 
@@ -801,6 +835,8 @@ Modal Window
   }
   .img-responsive {
     margin-top: 30px;
+    max-width: 50%;
+    margin-left: 25%;
   }
   .carousel-inner {
     height: 360px;
@@ -835,10 +871,19 @@ Modal Window
   margin: 0px auto;
   width: 63px;
   height: 65px;
-  }      
+  }     
 }
   
 @media (min-width: 481px) and (max-width: 767px) {
+  .img-responsive {
+    margin-top: 30px;
+    max-width: 50%;
+    margin-left: 25%;
+  }
+   .layer img {
+  width: 100px;
+  padding-top: 20%;
+}
   .main-form {
   padding: 10px;
   }
@@ -851,6 +896,11 @@ Modal Window
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+     .layer img {
+  width: 150px;
+  padding-top: 20%;
+  padding-right: 10%;
+}
   .process-box,.process-btn {
   margin-bottom: 40px;
   }
@@ -858,9 +908,14 @@ Modal Window
   margin: 0px auto;
   width: 140px;
   height: 130px;
-  }      
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+    .layer img {
+  width: 200px;
+  padding-top: 20%;
+  padding-right: 10%;
+}
   .services-list-item {
   margin: 0px auto;
   width: 160px;
@@ -877,12 +932,100 @@ Modal Window
   }
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
+   .layer img {
+  width: 200px;
+  padding-top: 20%;
+}
   .cd-modal-content {
       img{
       margin-left: 110px;
       }
-  }    
+  } 
 }
 @media (min-width: 1600px) {
+   .layer img {
+  width: 200px;
+  padding-top: 20%;
+  }
+}
 
+.overlay-nav {
+  display: none;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  padding: 2%;
+  border-radius: 60px;
+  background-color: rgba(0,0,0,.8);
+  ul {
+
+    line-height: 2.5;
+    text-align: center;
+    list-style: none;
+    li a {
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      &:hover {
+        text-decoration: none;
+        color: @base-red;
+      }  
+      color: #fff;
+      font-size: 37px;
+      .opn-bold;  
+    }
+  }
+}
+.close-nav {
+  position: fixed;
+  font-size: 50px;
+  top:3%;
+  right: 5%;
+  color: #fff;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: @base-red;
+  }
+}
+
+#layer-1 {
+  margin-left: 82%;
+  margin-bottom: -2%;
+
+}
+#layer-2 {
+  margin-left: 60%;
+}
+#layer-3 {
+  margin-left: 65%;
+  margin-top: 9%;
+}
+#layer-4 {
+  margin-left: 40%;
+  margin-top: 0%;
+}
+#layer-5 {
+  margin-left: -3%;
+}
+#layer-6 {
+  margin-left: 20%;
+  margin-top: 2%;
+}
+#layer-7 {
+  margin-left: 15%;
+  margin-top: 13%;
+}
+.parallax-window {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.panel-default>.panel-heading {
+background-color: #fbfad4;
+}
+
+.modal-body  {
+  background-color: #fff;
 }
