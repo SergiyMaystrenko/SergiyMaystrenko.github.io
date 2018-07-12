@@ -217,7 +217,7 @@ border-radius: 5px;
 
 
 /*Process section*/
-section#process,section#works,section#services,section#FAQ,section#feedback,section#parallax {
+section#process,section#works,section#services,section#FAQ,section#feedback,section#parallax,section#gallery {
  background-image: url(../img/pattern.png);
  background-repeat: repeat;
 }
@@ -411,9 +411,6 @@ color: @base-red;
 }
 /* feedback section */   
 
-.carousel-inner {
-    height: 800px;
-  }
 .carousel-control.right, .carousel-control.left{
   color: @base-red;
   background: none;
@@ -428,10 +425,16 @@ color: @base-red;
 .carousel-indicators {
   z-index: 1;
 }
+.gallery-img {
+    display: block;
+    margin: auto;
+    margin-bottom: 0;
+}
 .feedback {
   &-img {
     display: block;
     margin: 0 auto;
+    margin-bottom: -64px;
   }
   &-box {
     margin-left: 15px;
@@ -456,9 +459,7 @@ color: @base-red;
       border-radius: 50%;
     } */
   }
-  &-img {
-    margin-bottom: -64px;
-  }
+
   &-shadow {
     background-color: @white;
     padding: 10px;
@@ -612,6 +613,7 @@ svg {
   top: 40px;
   left: 20%;
   }
+  
 
 /* -------------------------------- 
 
@@ -838,9 +840,7 @@ Modal Window
     max-width: 50%;
     margin-left: 25%;
   }
-  .carousel-inner {
-    height: 360px;
-  }
+
   .cd-modal-content {
     padding-top: 18px;
     img{
@@ -957,7 +957,7 @@ Modal Window
   top: 0;
   padding: 2%;
   border-radius: 60px;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.5);
   ul {
 
     line-height: 2.5;
@@ -993,7 +993,6 @@ Modal Window
 #layer-1 {
   margin-left: 82%;
   margin-bottom: -2%;
-
 }
 #layer-2 {
   margin-left: 60%;
@@ -1025,7 +1024,73 @@ Modal Window
 .panel-default>.panel-heading {
 background-color: #fbfad4;
 }
+  .modal-content-work {
+    background-color: #89adca;
+    p {
+    font-size: 14px;
+    position: relative;
+    text-align: center;
+    color: @white;
+    background-color: rgba(0, 0, 0, 0.1);
+   }
+  }
+.modal-footer {
+  border-top: 0;
+}
+.modal-header  {
+    border-bottom: 0;
+  }
 
 .modal-body  {
   background-color: #fff;
 }
+
+/* coverrs */
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;   overflow: hidden; 
+  
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+    height: 100%;
+}
+/*end coverrs */
+
+/* Google map */
+#map {
+  padding-bottom:0%;
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
