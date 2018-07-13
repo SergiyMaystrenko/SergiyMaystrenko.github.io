@@ -9,7 +9,7 @@
 	$to = "maystrenko33@gmail.com";
 	//Далее идет тема и само сообщение
 	// Тема письма
-	$subject = "Заявка с сайта homework.sm";
+	$subject = "Заявка с сайта sergiymaystrenko.github.io";
 	// Сообщение письма
 	$message = "
 	Форма, которую заполнил клиент: ".htmlspecialchars($whatewer)."
@@ -19,7 +19,7 @@
 	// Телефон: <a href='tel:$phone'>".htmlspecialchars($phone)."</a>";
 
 	// Отправляем письмо при помощи функции mail();
-	$headers = "From: homework.sm <Sergiy@homework.sm>\r\nContent-type: text/html; charset=UTF-8 \r\n";
+	$headers = "From: sergiymaystrenko.github.io <Sergiy@sergiymaystrenko.github.io>\r\nContent-type: text/html; charset=UTF-8 \r\n";
 	mail ($to, $subject, $message, $headers);
 	// Перенаправляем человека на страницу благодарности и завершаем скрипт
 	header('Location: thanks.html');
