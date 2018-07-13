@@ -19,7 +19,7 @@
 	// Телефон: <a href='tel:$phone'>".htmlspecialchars($phone)."</a>";
 
 	// Отправляем письмо при помощи функции mail();
-	$headers = "From: sergiymaystrenko.github.io <Sergiy@sergiymaystrenko.github.io>\r\nContent-type: text/html; charset=UTF-8 \r\n";
+	$headers = "From: sergiymaystrenko.github.io <38985615+SergiyMaystrenko@users.noreply.github.com>\r\nContent-type: text/html; charset=UTF-8 \r\n";
 	mail ($to, $subject, $message, $headers);
 	// Перенаправляем человека на страницу благодарности и завершаем скрипт
 	header('Location: thanks.html');
