@@ -6,7 +6,7 @@
 	$user_message=$_POST['user_message'];
 
 	//Тут указываем на какой ящик посылать письмо
-	$to = "maystrenko33@gmail.com";
+	$to = "38985615+SergiyMaystrenko@users.noreply.github.com";
 	//Далее идет тема и само сообщение
 	// Тема письма
 	$subject = "Заявка с сайта sergiymaystrenko.github.io";
