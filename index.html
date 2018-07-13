@@ -1193,23 +1193,36 @@
 		   $("#phone").mask("+38 (999) 999-99-99");
         });
     </script>
+
+<!--      /*AJAX Form Submittin*/ -->
+ <!--    <script>
+ 		$(document).ready(function(){
+ 			$("#main-form-ajax").submit(function(){
+ 				$.ajax({
+ 					type: "POST",
+ 					url: "mail.php",
+ 					data: $(this).serialize()
+ 				}).done(function(){
+ 					$(this).find("input").val("");
+ 					$('#modal-thanks').modal('show');
+ 					$("#main-form-ajax").trigger("reset");
+ 				}); 
+ 				return false;
+ 			});
+ 		});
+ </script> -->
+<!-- /*Без отправки AJAX Form Submittin*/ -->
     <script>
-    	 /*AJAX Form Submittin*/
 		$(document).ready(function(){
 			$("#main-form-ajax").submit(function(){
-				$.ajax({
-					type: "POST",
-					url: "mail.php",
-					data: $(this).serialize()
-				}).done(function(){
 					$(this).find("input").val("");
 					$('#modal-thanks').modal('show');
 					$("#main-form-ajax").trigger("reset");
-				}); 
 				return false;
 			});
 		});
     </script>
+
     <script>
 		$(document).ready(function() {
 			var $nav = $('a.main-nav-bar');
