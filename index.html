@@ -700,7 +700,7 @@
 	        <h4 class="modal-title" id="myModalLabel">About Modern App Disign</h4>
 	      </div>
 	      <div class="modal-body">
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quae dicta quidem nam assumenda similique, tempore recusandae accusamus quas, optio voluptas voluptatibus, incidunt deleniti id, mollitia cumque dolores officia reiciendis.</p>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ex illum maxime dolore nesciunt, reprehenderit alias assumenda vitae cumque itaque asperiores maiores dicta corporis atque unde incidunt tempore, saepe necessitatibus optio temporibus expedita illo impedit molestias cum aspernatur. Et alias dolorum, maxime magni tempora quasi quia nulla consectetur numquam iste ipsum explicabo excepturi obcaecati dolore. Perspiciatis ut facere animi sit! ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quae dicta quidem nam assumenda similique, tempore recusandae accusamus quas, optio voluptas voluptatibus, incidunt deleniti id, mollitia cumque dolores officia reiciendis.</p>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -1309,10 +1309,12 @@
           center: {lat: 50.439443, lng:  30.544423},
           zoom: 14
         });
-        var marker = new google.maps.Marker({
-          position: {lat: 50.439443, lng:  30.544423},
+        var image = 'img/Arsenal.png';
+        var beachMarker = new google.maps.Marker({
+          position: {lat: 50.439443, lng: 30.544423},
           map: map,
-          title: 'Derzhavne Kosmichne Ahentstvo Ukrayiny, Kyiv, vul. Moscow, 8'
+          title: 'Derzhavne Kosmichne Ahentstvo Ukrayiny, Kyiv, vul. Moscow, 8',
+          icon: image
         });
       }
     </script>
